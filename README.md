@@ -23,3 +23,6 @@
   1. Zákl. navigácia pomocou dashboardu (Admin a user rôzny dashboard)
   2. Login/SignUp na úvodnej stránke
   3. Základný dizajn apky (figma)
+  4. Vytvoriť databázu
+  5. Pripojiť databázu
+  6. SpringBoot Security
