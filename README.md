@@ -1,5 +1,7 @@
 # Hours-Alpha
 
+*Naša aplikácia bude slúži pre zamestnávateľov, aby mali jednoduchší prehľad o svojich zamestnancoch. Zamestnanci si budú zapisovať hodiny (poprípade miesto kde pracujú) a dáta o zamestnancoch bude vidieť zamestnávateľ v grafoch. Na zákl. počtu hodín sa vypočíta čistá mzda, ktorú dostane daným zamestnanec. Dokument o vypracovaných hodinách, vypočítanej mzde a ostatných informáciách si bude vedieť user aj admin exportovať do excelu/pdf.*
+
 ## 1) Úvodná strana
 
 ## 2) Dashboard 
