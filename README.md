@@ -1,4 +1,4 @@
-# Hours-Alpha
+# Hours-Alpha 🗂
 
 *Naša aplikácia bude slúži pre zamestnávateľov, aby mali jednoduchší prehľad o svojich zamestnancoch. Zamestnanci si budú zapisovať hodiny (poprípade miesto kde pracujú) a dáta o zamestnancoch bude vidieť zamestnávateľ v grafoch. Na zákl. počtu hodín sa vypočíta čistá mzda, ktorú dostane daným zamestnanec. Dokument o vypracovaných hodinách, vypočítanej mzde a ostatných informáciách si bude vedieť user aj admin exportovať do excelu/pdf.*
 
@@ -19,7 +19,7 @@
   1. Prístup len zamestnávateľ (admin účet)
   2. *Obrázok pridáme neskôr*
 
-## Stihnúť do 22.02.2022
+## Stihnúť do 22.02.2022 🟣
   1. Zákl. navigácia pomocou dashboardu (Admin a user rôzny dashboard)
   2. Login/SignUp na úvodnej stránke
   3. Základný dizajn apky (canva)
