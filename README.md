@@ -13,7 +13,7 @@
   1. *Obrázok pridáme neskôr*
   
 ## 4) User UI
-  1. *Obrázok pridáme neskôr*
+  ![](Pictures/Figma.png)
 
 ## 5) Grafy s dátami o užívateľoch
   1. Prístup len zamestnávateľ (admin účet)
