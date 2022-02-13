@@ -5,24 +5,17 @@
     box-sizing: border-box;
 }
 
-.main{
-    background: #1D2026;
-    min-height: 100vh;
-    width: 100%;
-    color: white;
-    position: relative;
-}
-
 nav{
     display: flex;
     align-items: center;
-    
-    padding: 40px 8%;
+    background: #262930;
+    padding: 20px 6%;
 }
 
 nav .logo{
     width: 160px;
     cursor: pointer;
+    padding-right: 6%;
 }
 
 nav ul{
@@ -36,38 +29,13 @@ nav ul li {
     margin: 0 40px;
 }
 
-nav ul li a {
+a {
     font-size: large;
     text-decoration: none;
     color: white;
 }
 
-.title{
-    font-size: 300%;
-}
-
-.text{
-    max-width: 650px;
-    margin-top: 9%;
-    margin-left: 50%;
-    font-size: 1.25rem;
-}
-
-p{
-    margin-top: 15px;
-}
-
-button{
-    margin-top: 5%;
-    padding: 20px 100px;
-    background-color: #00986F;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: bold;
-}
-
-button :hover{
-    background-color: #008360;
+a:hover{
+    color: #c9c9c9;
+    transition: 0.25s ease-in-out;
 }
