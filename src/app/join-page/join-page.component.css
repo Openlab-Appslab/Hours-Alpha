@@ -2,6 +2,54 @@
     background: #1D2026;
     height: 100%;
     width: 100%;
-    color: white;
+    color: black;
     position: absolute;
+}
+
+form{
+    font-family: sans-serif;
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.form_div{
+    background-color: white;
+    display: block;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: 65%;
+    margin-top: 150px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.div_btn{
+    text-align: center;
+}
+
+.cancel_btn{
+    font-size: large;
+}
+
+.confirm_btn{
+    margin-left: 20px;
+    font-size: large;
+}
+
+label{
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.check_box{
+    margin-bottom: 15px;
+    /*#00986F*/
 }
