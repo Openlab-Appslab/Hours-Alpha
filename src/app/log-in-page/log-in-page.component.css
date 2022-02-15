@@ -4,4 +4,23 @@
     width: 100%;
     color: white;
     position: absolute;
+    font-family: sans-serif;
+}
+
+.login-form{
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 400px;
+    text-align: center;
+    height: 500px;
+    position: relative;
+    margin-left: 65%;
+    margin-top: 150px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+.login_heading{
+    font-size: 45px;
+    padding-top: 20px;
 }
