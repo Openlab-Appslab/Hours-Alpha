@@ -23,6 +23,7 @@ p{
 }
 
 button{
+    font-family: sans-serif;
     margin-top: 5%;
     padding: 20px 100px;
     background-color: #00986F;
