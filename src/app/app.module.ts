@@ -11,7 +11,7 @@ import { UserRoleComponent } from './user-role/user-role.component';
     AppComponent,
     basicRoutingComponents,
     AdminRoleComponent,
-    UserRoleComponent
+    UserRoleComponent,
   ],
   imports: [
     BrowserModule,
