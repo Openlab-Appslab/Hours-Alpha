@@ -1,12 +1,3 @@
-.main-component{
-    width: 100%;
-    height: 100%;
-    margin-top: -20px;
-    font-family: sans-serif;
-    background: #1D2026;
-    position: relative;
-}
-
 .mr-2{
     margin-left: 25px;
 }
@@ -15,7 +6,9 @@
     height: 800px;
     width: 350px;
     background-color: #262930;
+    font-family: sans-serif;
     position: relative;
+    margin-top: -20px;
 }
 
 .menu-items{
