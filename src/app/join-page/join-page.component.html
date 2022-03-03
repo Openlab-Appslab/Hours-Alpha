@@ -5,39 +5,38 @@
     
                 <div class="div_first_name">
                     <label class="first_name_label" for="first_name">First Name</label><br>
-                    <input type="text" placeholder="Enter Your First Name" name="first_name" required><br>
+                    <input type="text" placeholder="Your First Name" name="first_name" class="input_first_name" required><br>
                 </div>
 
                 <div class="div_last_name">
                     <label class="last_name_label" for="last_name">Last Name</label><br>
-                    <input type="text" placeholder="Enter Your Last Name" name="last_name" required><br>
+                    <input type="text" placeholder="Your Last Name" name="last_name" class="input_last_name" required><br>
                 </div>
                 
                 <div class="div_email">
                     <label class="email_label" for="email">E-Mail</label><br>
-                    <input type="email" placeholder="Enter E-Mail" name="email" required><br>
+                    <input type="email" placeholder="Enter E-Mail" name="email" class="input_email" required><br>
                 </div>
                 
                 <div class="div_password">
                     <label class="password_label" for="password">Password</label><br>
-                    <input type="text" placeholder="Enter Password" name="password" required><br>
+                    <input type="text" placeholder="Enter Password" name="password" class="input_password" required><br>
                 </div>
                 
                 <div class="div_repeat_password">
                     <label class="password_repeat_label" for="password_repeat">Repeat Password</label> <br> 
-                    <input type="text" placeholder="Repeat Password" name="password_repeat" required><br>
-                </div>
+                    <input type="text" placeholder="Repeat Password" name="password_repeat" class="input_password_repeat" required><br>
+                </div><br>
     
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                    <p>Employer</p>
-                  </label>
-    
+                <label class="container">One
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+
                 <div class="div_btn">
                     <button class="cancel_btn" type="button" routerLink="/landing">Cancel</button>
                     <button class="confirm_btn" type="submit" routerLink="/login">Sign In</button>
-                </div>
+                </div> 
         </form>
     </div>
 </div>
