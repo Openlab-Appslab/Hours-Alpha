@@ -1,9 +1,10 @@
 .main{
     background: #1D2026;
-    height: 100%;
+    height: 87.25%;
     width: 100%;
     color: black;
     position: absolute;
+    display: block;
 }
 
 .switch {
@@ -85,7 +86,7 @@ form{
     height: 620px;
     border-radius: 10px;
     margin-left: 65%;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 h1{
