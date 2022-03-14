@@ -3,9 +3,9 @@
         <form class="login">
             <label><h2 class="login_heading">Log in</h2></label>
             <label class="username_input"><h3 style="margin-bottom: -10px;">Email</h3></label><br>
-            <input  type="email" name="email" [(ngModel)] = "email"  placeholder="Email" required>
+            <input id="email" type="email" name="email" [(ngModel)] = "email"  placeholder="Email" required>
             <label><h3 class="pass_input">Password</h3></label><br>
-            <input type="text" name="password" [(ngModel)] = "password" placeholder="Password" required><br>
+            <input id="password" type="text" name="password" [(ngModel)] = "password" placeholder="Password" required><br>
             <input class="checkbox" type="checkbox" id="keepsigned"> Remeber Me
             <br>
             <button type="submit" class="log_button" routerLink="/dashboard">Log In</button> 
