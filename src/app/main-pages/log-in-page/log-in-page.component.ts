@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-log-in-page',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-in-page.component.css']
 })
 export class LogInPageComponent implements OnInit {
+
+  email!: string;
+  password!: string;
+
 
   constructor() { }
 
