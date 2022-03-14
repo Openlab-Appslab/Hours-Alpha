@@ -10,6 +10,6 @@ export class LogInPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+  } 
 
 }

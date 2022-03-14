@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { User } from './user';
 
 @Injectable({
@@ -7,18 +9,25 @@ import { User } from './user';
 })
 export class UserService {
 
+  private apiServerUrl = environment.apiBaseUrl;
+
   constructor(
     private http: HttpClient,
   ) { }
 
-  users : User[] | undefined;
+  public getUsers(): Observable<User[]> {
+    return this.http.get<User[]>('${this.apiServerUrl}/user/all');
+  }
 
-  getUsers() {
-    return this.http.get<any>('be').subscribe(
-      response => {
-        console.log(response);
-        this.users = response;
-      }
-    );
+  public addUser(user: User): Observable<User> {
+    return this.http.post<User>('${this.apiServerUrl}/user/add', user);
+  }
+
+  public updateUser(user: User): Observable<User> {
+    return this.http.put<User>('${this.apiServerUrl}/user/update', user);
+  }
+
+  public deleteUser(userId: number): Observable<User> {
+    return this.http.delete<User>('${this.apiServerUrl}/user/delete/${userId}');
   }
 }
