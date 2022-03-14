@@ -6,6 +6,10 @@ import { LogInPageComponent } from './main-pages/log-in-page/log-in-page.compone
 import { DiscoverPageComponent } from './main-pages/discover-page/discover-page.component';
 import { LandingPageComponent } from './main-pages/landing-page/landing-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './sidebar-components/home/home.component';
+import { StatsComponent } from './sidebar-components/stats/stats.component';
+import { ContactComponent } from './sidebar-components/contact/contact.component';
+import { CalculatorComponent } from './sidebar-components/calculator/calculator.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "landing", pathMatch: "full"},
@@ -27,4 +31,8 @@ export const basicRoutingComponents = [
   LogInPageComponent,
   DiscoverPageComponent,
   DashboardComponent,
+  HomeComponent,
+  StatsComponent,
+  ContactComponent,
+  CalculatorComponent,
 ];

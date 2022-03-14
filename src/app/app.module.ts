@@ -17,10 +17,6 @@ import { ContactComponent } from './sidebar-components/contact/contact.component
     basicRoutingComponents,
     AdminRoleComponent,
     UserRoleComponent,
-    HomeComponent,
-    StatsComponent,
-    CalculatorComponent,
-    ContactComponent,
   ],
   imports: [
     BrowserModule,
