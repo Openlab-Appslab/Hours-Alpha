@@ -1,19 +1,35 @@
-  import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
-  selector: 'app-log-in-page',
-  templateUrl: './log-in-page.component.html',
-  styleUrls: ['./log-in-page.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class LogInPageComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
-  email!: string;
-  password!: string;
+  constructor(private Auth: AuthService, 
+              private router: Router) { }
 
+  ngOnInit() {
+  }
 
-  constructor() { }
+  loginUser(event: { preventDefault: () => void; target: any; }) {
+    event.preventDefault()
+    const target = event.target
+    const username = target.querySelector('#username').value
+    const password = target.querySelector('#password').value
 
-  ngOnInit(): void {
-  } 
+    this.Auth.getUserDetails(username, password).subscribe(data => {
+      if(data.success) {
+        this.router.navigate(['admin'])
+        this.Auth.setLoggedIn(true)
+      } else {
+        window.alert(data.message)
+      }
+    })
+    console.log(username, password)
+  }
 
 }

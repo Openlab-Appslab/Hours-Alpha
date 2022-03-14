@@ -21,7 +21,7 @@ export class AuthService {
     return this.loggedInStatus
   }
 
-  getUserDetails(username, password) {
+  getUserDetails(username: any, password: any) {
     return this.http.post<myData>('/api/auth.php', { // post these details to API server return user info if correct
       username,
       password
