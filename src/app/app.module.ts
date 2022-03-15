@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule, basicRoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminRoleComponent } from './admin-role/admin-role.component';
@@ -22,6 +22,7 @@ import { ContactComponent } from './sidebar-components/contact/contact.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
