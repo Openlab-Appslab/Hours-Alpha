@@ -7,7 +7,7 @@
     width: 350px;
     background-color: #262930;
     font-family: sans-serif;
-    position: relative;
+    position: fixed;
     margin-top: -20px;
 }
 
