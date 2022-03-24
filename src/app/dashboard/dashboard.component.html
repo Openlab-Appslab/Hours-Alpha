@@ -1,37 +1,67 @@
 <mat-sidenav-container>
-    <mat-sidenav mode = "side" opened>
-
-        <img class="avatar mat-elevation-z8">
+    <mat-sidenav [disableClose]="true" mode = "side" opened >
+        
+        <img class="avatar" src="../assets/images/pfp.jpg">
         <h4 class="name">Jozko Mrkvicka</h4>
         <p class="destinatino">Employee</p>
 
-        <button mat-button class="menu-button">
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
+        <mat-divider></mat-divider>
+
+        <button 
+            mat-button 
+            class="menu-button"
+            routerLink = "/home">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
         </button><br>   
 
-        <button mat-button class="menu-button">
-            <mat-icon>assessment</mat-icon>
-            <span>Stats</span>
+        <button 
+            mat-button 
+            class="menu-button"
+            routerLink="/stats">
+                <mat-icon>assessment</mat-icon>
+                <span>Stats</span>
         </button><br>
 
-        <button mat-button class="menu-button">
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
+        <button 
+            mat-button 
+            class="menu-button"
+            routerLink = "/calculator">
+                <mat-icon>calculate</mat-icon>
+                <span>Calculator</span>
         </button><br>
 
-        <button mat-button class="menu-button">
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
+        <button 
+            mat-button 
+            class="menu-button"
+            routerLink = "/info">
+                <mat-icon>info</mat-icon> <!--phone_in_talk--> 
+                <span>Info</span>
         </button><br>
+
+        <button 
+            mat-button 
+            class="menu-button"
+            routerLink = "/contact">
+                <mat-icon>contact_support</mat-icon> <!--phone_in_talk--> 
+                <span>Contact</span>
+        </button><br>
+
+        <mat-divider></mat-divider>
+
+        <button 
+            mat-button 
+            class="menu-button">
+                <mat-icon>logout</mat-icon> <!--phone_in_talk--> 
+                <span>Log Out</span>
+        </button><br>
+
     </mat-sidenav>
 
-    <mat-divider></mat-divider>
-
     <mat-sidenav-content>
-        <div class="content mat elevation c4">
-            Main content
+        <div class="content">
+            :DDDD
+            <router-outlet></router-outlet>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
-<router-outlet></router-outlet>

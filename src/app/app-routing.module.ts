@@ -10,6 +10,7 @@ import { HomeComponent } from './sidebar-components/home/home.component';
 import { StatsComponent } from './sidebar-components/stats/stats.component';
 import { ContactComponent } from './sidebar-components/contact/contact.component';
 import { CalculatorComponent } from './sidebar-components/calculator/calculator.component';
+import { InfoComponent } from './sidebar-components/info/info.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "landing", pathMatch: "full"},
@@ -18,6 +19,11 @@ const routes: Routes = [
   { path: "login", component: LogInPageComponent },
   { path: "discover", component: DiscoverPageComponent },
   { path: "dashboard", component: DashboardComponent },
+  { path: "home", component: HomeComponent },
+  { path: "stats", component: StatsComponent },
+  { path: "calculator", component: CalculatorComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "info", component: InfoComponent },
 ];
 
 @NgModule({
@@ -35,4 +41,5 @@ export const basicRoutingComponents = [
   StatsComponent,
   ContactComponent,
   CalculatorComponent,
+  InfoComponent,
 ];

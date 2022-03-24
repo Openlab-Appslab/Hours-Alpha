@@ -1,12 +1,13 @@
+.avatar{
+    margin-top: 32px;
+}
+
 mat-sidenav{
     width: 325px;
     border-right: none;
-    background: #002b5c;
+    background: #262930;
     color: white;
     text-align: center;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-
 }
 
 mat-sidenav-container{
@@ -37,22 +38,27 @@ mat-sidenav-container{
 
 mat-icon{
     margin-right: 8px;
+    color: #00986F;
 }
 
 .name{
     margin: 0%;
     margin-top: 8px;
     font-weight: normal;
+    font-size: 1.2rem;
 }
 
 .destination{
-    margin-top: 2px;
+    margin-top: 4px;
     font-size: 0.2rem;
     color: lightgray;
 }
 
 mat-divider{
-    margin-bottom: 16px;
     background-color: lightgray;
-    margin-top: 16px;
+    margin: 16px;
+}
+
+span{
+    color: #00986F;
 }
