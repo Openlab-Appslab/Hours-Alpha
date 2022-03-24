@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { AdminRoleComponent } from './admin-role/admin-role.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './sidebar-components/home/home.component';
-import { StatsComponent } from './sidebar-components/stats/stats.component';
-import { CalculatorComponent } from './sidebar-components/calculator/calculator.component';
-import { ContactComponent } from './sidebar-components/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,13 @@ import { ContactComponent } from './sidebar-components/contact/contact.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
