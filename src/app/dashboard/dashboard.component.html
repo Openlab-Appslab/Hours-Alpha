@@ -1,20 +1,37 @@
-<section class="main-component">
-    <div class="row">
-        <div class="col-lg-2">
-            <div class="main-box">
-                
-                <div class="side-menu-list">
-                    <ul class="menu-items">
-                        <li (click)="goTo('Home')" [ngClass]="{'onActive' : selectedMenu == 'Home'}"> Home</li>
-                        <li (click)="goTo('Stats')" [ngClass]="{'onActive' : selectedMenu == 'Stats'}"> Stats</li>
-                        <li (click)="goTo('Calculator')" [ngClass]="{'onActive' : selectedMenu == 'Calculator'}"> Calculator</li>
-                        <li (click)="goTo('Contact')" [ngClass]="{'onActive' : selectedMenu == 'Contact'}"> Contact</li>
-                        <li (click)="goTo('LogOut')" [ngClass]="{'onActive' : selectedMenu == 'LogOut'}"> LogOut</li>
-                    </ul>
-                </div>
+<mat-sidenav-container>
+    <mat-sidenav mode = "side" opened>
 
-            </div>
+        <img class="avatar mat-elevation-z8">
+        <h4 class="name">Jozko Mrkvicka</h4>
+        <p class="destinatino">Employee</p>
+
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button><br>   
+
+        <button mat-button class="menu-button">
+            <mat-icon>assessment</mat-icon>
+            <span>Stats</span>
+        </button><br>
+
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button><br>
+
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button><br>
+    </mat-sidenav>
+
+    <mat-divider></mat-divider>
+
+    <mat-sidenav-content>
+        <div class="content mat elevation c4">
+            Main content
         </div>
-    </div>
-</section>
+    </mat-sidenav-content>
+</mat-sidenav-container>
 <router-outlet></router-outlet>
