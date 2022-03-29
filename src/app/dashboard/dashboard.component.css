@@ -1,5 +1,6 @@
 .avatar{
     margin-top: 32px;
+    background-image: url(./user.png);
 }
 
 mat-sidenav{

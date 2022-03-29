@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.home_heading{
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-right: 1370px;
+    margin-top: -380px;
+}
+
+.hours_container{
+    margin-top: 40px;
+    background-color: #1D2026;;
+    width: 550px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+h2{
+    color: #00986F;
+    font-size: 30px;
+    padding: 13px;
+}
+
+h3{
+    color: #c7c7c7;
+    font-size: 40px;
+    margin-left: 300px;
+}
