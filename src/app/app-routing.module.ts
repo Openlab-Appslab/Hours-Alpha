@@ -21,12 +21,11 @@ const routes: Routes = [
   { path: "dashboard", component: DashboardComponent, 
     children: [
     { path: "info", component: InfoComponent },
+    { path: "home", component: HomeComponent },
+    { path: "stats", component: StatsComponent },
+    { path: "calculator", component: CalculatorComponent },
+    { path: "contact", component: ContactComponent },
   ] },
-  { path: "home", component: HomeComponent },
-  { path: "stats", component: StatsComponent },
-  { path: "calculator", component: CalculatorComponent },
-  { path: "contact", component: ContactComponent },
-  
     
 ];
 
