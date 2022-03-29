@@ -18,12 +18,16 @@ const routes: Routes = [
   { path: "join", component: JoinPageComponent },
   { path: "login", component: LogInPageComponent },
   { path: "discover", component: DiscoverPageComponent },
-  { path: "dashboard", component: DashboardComponent },
+  { path: "dashboard", component: DashboardComponent, 
+    children: [
+    { path: "info", component: InfoComponent },
+  ] },
   { path: "home", component: HomeComponent },
   { path: "stats", component: StatsComponent },
   { path: "calculator", component: CalculatorComponent },
   { path: "contact", component: ContactComponent },
-  { path: "info", component: InfoComponent },
+  
+    
 ];
 
 @NgModule({
