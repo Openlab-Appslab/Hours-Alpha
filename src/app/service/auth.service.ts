@@ -32,7 +32,7 @@ export class AuthService {
       }),
       withCredentials: true
     };
-    return this.httpClient.get('http://localhost:8080/user', options).pipe(
+    return this.httpClient.get('http://localhost:8080/Auth/Login', options).pipe(
       tap(() => this.token = token)
     );
   }

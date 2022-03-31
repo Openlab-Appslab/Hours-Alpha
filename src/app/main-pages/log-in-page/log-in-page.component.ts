@@ -29,6 +29,6 @@ export class LogInPageComponent implements OnInit {
       const password = this.loginGroup.value.password;
       this.authService.login(email, password)
         .subscribe(() => this.router.navigateByUrl('/dashboard'));
-    }
+    } 
   }
 }
