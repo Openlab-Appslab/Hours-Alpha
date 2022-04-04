@@ -17,8 +17,8 @@ export class LogInPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  loginGroup = new FormGroup({
+
+  loginGroup = new FormGroup({ 
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });

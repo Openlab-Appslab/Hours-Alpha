@@ -1,29 +1,29 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-
-  token: string;
+export class RegisterService {
 
   constructor(
     private readonly httpClient: HttpClient
   ) { }
 
+  token: string;
+
   getToken(): string {
     return this.token;
   }
 
-  isLoggedIn(): boolean {
+  isRegistered(): boolean {
     return !!this.token;
   }
 
-  login(email: string, password: string): Observable<any> {
-    const info = btoa(`${email}:${password}`);
+  register(firstName: string, lastName: string, email: string, finalpassword: string): Observable<any> {
+    const info = btoa(`${firstName}:${lastName}:${email}:${finalpassword}`);
     const token = `Basic ${info}`;
     const options = {
       headers: new HttpHeaders({
@@ -35,9 +35,5 @@ export class AuthService {
     return this.httpClient.get('http://localhost:8080/Auth/Login', options).pipe(
       tap(() => this.token = token)
     );
-  }
-
-  logout(): void {
-    this.token = '';
   }
 }

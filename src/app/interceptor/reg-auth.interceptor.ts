@@ -3,33 +3,34 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor, HttpHeaders, HttpErrorResponse
+  HttpInterceptor,
+  HttpHeaders,
+  HttpErrorResponse
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AuthService } from '../service/auth.service';
-import { catchError } from 'rxjs/operators';
+import { RegisterService } from '../service/register.service';
 import { Router } from '@angular/router';
+import { catchError } from 'rxjs/operators';
 
 @Injectable()
-export class AuthInterceptor implements HttpInterceptor { 
+export class RegAuthInterceptor implements HttpInterceptor {
 
   constructor(
-    private readonly authService: AuthService,
+    private readonly registerService: RegisterService,
     private readonly router: Router
   ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    if (this.authService.isLoggedIn()) {
+    if (this.registerService.isRegistered()) {
       request = request.clone({
         headers: new HttpHeaders({
-          Authorization: this.authService.getToken()
+          Authorization: this.registerService.getToken()
         })
       });
     }
     return next.handle(request).pipe(
       catchError((err: HttpErrorResponse) => {
-        if (this.authService.isLoggedIn() && err.status === 401) {
-          this.authService.logout();
+        if (this.registerService.isRegistered() && err.status === 401) {
           this.router.navigateByUrl('/login');
         }
         throw err;

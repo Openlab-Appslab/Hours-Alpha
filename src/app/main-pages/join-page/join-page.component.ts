@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RegisterService } from 'src/app/service/register.service';
 
 @Component({
   selector: 'app-join-page',
@@ -7,11 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly registerService: RegisterService,
+    private readonly router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  signUpGroup = new FormGroup({
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+    repeatPassword: new FormControl('', Validators.required)
+  })
+
+  login(): void {
+    if(this.signUpGroup.valid) {
+      const firstName = this.signUpGroup.value.firstName;
+      const lastName = this.signUpGroup.value.lastName;
+      const email = this.signUpGroup.value.email;
+      const password = this.signUpGroup.value.password;
+      const repeatPassword = this.signUpGroup.value.repeatPassword;
+        
+      if(password == repeatPassword){
+        const finalPassword = password;
+
+          this.registerService.register(firstName, lastName, email, finalPassword)
+        .subscribe(() => this.router.navigateByUrl('/login'));
+      }
+    } 
+  }
 }
 
 export const enum PasswordCheckStrength{
