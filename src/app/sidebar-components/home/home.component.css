@@ -13,10 +13,11 @@ body{
 
 .hours_container{
     float: left;
-    background-color: #1D2026;;
-    width: 40%;
+    background-color: #1D2026;
+    width: 39%;
     height: 250px;
     border-radius: 10px;
+    margin-right: 1%;
 }
 
 h2{
@@ -33,24 +34,29 @@ h3{
 
 .edit_container{
     float: right;
-    background-color: pink;
+    background-color: #1D2026;
     width: 60%;
     height: 250px;
     border-radius: 10px;
 }
 
 .graph_1{
-    background-color: chocolate;
+    background-color: #1D2026;
     float: left;
     width: 70%;
-    height: 100px;
+    height: 460px;
+    margin-top: 1%;
+    border-radius: 10px;
 }
 
 .graph_2{
-    background-color: chartreuse;
+    background-color: #1D2026;
     float: right;
-    width: 30%;
-    height: 100px;
+    width: 29%;
+    height: 460px;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-radius: 10px;
 }
 
 .main_panel{
@@ -58,7 +64,7 @@ h3{
 }
 
 .stats{
-    margin-bottom: 1%;
+    margin-top: 1%;
 }
 
 mat-divider{
