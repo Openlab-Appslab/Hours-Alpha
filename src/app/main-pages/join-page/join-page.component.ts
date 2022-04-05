@@ -34,12 +34,12 @@ export class JoinPageComponent implements OnInit {
       const password = this.signUpGroup.value.password;
       const repeatPassword = this.signUpGroup.value.repeatPassword;
         
-      if(password == repeatPassword){
-        const finalPassword = password;
+      /*if(password == repeatPassword){
+        const finalPassword = password;*/
 
-          this.registerService.register(firstName, lastName, email, finalPassword)
+          this.registerService.register(firstName, lastName, email, password)
         .subscribe(() => this.router.navigateByUrl('/login'));
-      }
+      /*}*/
     } 
   }
 }

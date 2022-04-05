@@ -8,15 +8,14 @@ body{
     font-size: 45px;
     font-weight: bold;
     font-family: sans-serif;
-    margin-right: 1370px;
-    margin-top: -380px;
+    margin-top: 2%;
 }
 
 .hours_container{
-    margin-top: 40px;
+    float: left;
     background-color: #1D2026;;
-    width: 550px;
-    height: 125px;
+    width: 40%;
+    height: 250px;
     border-radius: 10px;
 }
 
@@ -30,4 +29,38 @@ h3{
     color: #c7c7c7;
     font-size: 40px;
     margin-left: 300px;
+}
+
+.edit_container{
+    float: right;
+    background-color: pink;
+    width: 60%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.graph_1{
+    background-color: chocolate;
+    float: left;
+    width: 70%;
+    height: 100px;
+}
+
+.graph_2{
+    background-color: chartreuse;
+    float: right;
+    width: 30%;
+    height: 100px;
+}
+
+.main_panel{
+    margin-top: 1%;
+}
+
+.stats{
+    margin-bottom: 1%;
+}
+
+mat-divider{
+    background-color: gray;
 }

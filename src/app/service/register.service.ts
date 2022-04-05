@@ -12,7 +12,7 @@ export class RegisterService {
     private readonly httpClient: HttpClient
   ) { }
 
-  token: string;
+  token: string = '';
 
   getToken(): string {
     return this.token;
@@ -32,7 +32,7 @@ export class RegisterService {
       }),
       withCredentials: true
     };
-    return this.httpClient.get('http://localhost:8080/Auth/Login', options).pipe(
+    return this.httpClient.post('http://localhost:8080/noAuth/addNewEmployee', options).pipe(
       tap(() => this.token = token)
     );
   }

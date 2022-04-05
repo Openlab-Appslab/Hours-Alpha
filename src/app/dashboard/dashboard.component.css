@@ -17,11 +17,7 @@ mat-sidenav-container{
 
 .content{
     height: calc(100vh - 98px);
-    margin: 16px;
-    margin-left: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 8px;
 
     font-size: 2rem;
     color: lightgray;
