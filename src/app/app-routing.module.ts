@@ -7,7 +7,6 @@ import { DiscoverPageComponent } from './main-pages/discover-page/discover-page.
 import { LandingPageComponent } from './main-pages/landing-page/landing-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './sidebar-components/home/home.component';
-import { StatsComponent } from './sidebar-components/stats/stats.component';
 import { ContactComponent } from './sidebar-components/contact/contact.component';
 import { CalculatorComponent } from './sidebar-components/calculator/calculator.component';
 import { InfoComponent } from './sidebar-components/info/info.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
     children: [
     { path: "info", component: InfoComponent },
     { path: "home", component: HomeComponent },
-    { path: "stats", component: StatsComponent },
     { path: "calculator", component: CalculatorComponent },
     { path: "contact", component: ContactComponent },
   ] },
@@ -41,7 +39,6 @@ export const basicRoutingComponents = [
   DiscoverPageComponent,
   DashboardComponent,
   HomeComponent,
-  StatsComponent,
   ContactComponent,
   CalculatorComponent,
   InfoComponent,

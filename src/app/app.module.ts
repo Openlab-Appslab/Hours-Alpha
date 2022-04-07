@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule, basicRoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminRoleComponent } from './admin-role/admin-role.component';
-import { UserRoleComponent } from './user-role/user-role.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,8 +16,6 @@ import { MatDividerModule } from '@angular/material/divider';
   declarations: [
     AppComponent,
     basicRoutingComponents,
-    AdminRoleComponent,
-    UserRoleComponent,
   ],
   imports: [
     BrowserModule,
