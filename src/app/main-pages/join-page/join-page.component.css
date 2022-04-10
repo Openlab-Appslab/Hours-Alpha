@@ -5,6 +5,8 @@
   color: black;
   position: absolute;
   display: block;
+  overflow: hidden;
+  position: fixed;
 }
 
 /*.switch {

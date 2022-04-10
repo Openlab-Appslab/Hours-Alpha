@@ -5,6 +5,8 @@
     width: 100%;
     color: white;
     position: absolute;
+    overflow: hidden;
+    position: fixed;
 }
 
 .title{

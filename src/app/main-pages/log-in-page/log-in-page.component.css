@@ -5,7 +5,8 @@
     color: white;
     position: absolute;
     font-family: sans-serif;
-
+    overflow: hidden;
+    position: fixed;
 }
 
 .login_form{

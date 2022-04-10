@@ -1,1 +1,114 @@
-<p>calculator works!</p>
+<div class="background">
+
+    <div class="main">
+        <h1 class="contact_header">Calculate Your Salary</h1>
+
+        <div class="page">
+        
+            <div class="kalendarny_rok">
+                <h3 class="kalendarny_rok_header">Kalendárny rok</h3>
+                <div class="button_div">
+                    <button mat-raised-button class="a2021">2021</button>
+                    <button mat-raised-button class="a2022">2022</button>
+                </div>
+            </div>
+
+            <div class="vyber_mzdy">
+                <h3 class="mzda_header">Mesačná</h3>
+                <div class="vyber_mzdy">
+                    <mat-form-field appearanance="fill" class="selector_mzda">
+                        <select matNativeControl required class="selector_options_mzda">
+                            <option value="hruba_mzda">Hrubá mzda</option>
+                            <option value="cista_mzda">Čistá mzda</option>
+                            <option value="cena_prace">Cena práce</option>
+                        </select>
+                    </mat-form-field>
+    
+                    <div class="salary_input_div">
+                        <label class="field field_v3">
+                            <input class="field__input" placeholder="Your Message">
+                            <span class="field__label-wrap">
+                            <span class="field__label">Mzda v €</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="uplatnujem_header">Uplatňujem si nezdaniteľnú časť základu dane</h3>
+                <div class="uplatnujem">
+                    <mat-form-field appearanance="fill" class="selector_ano_nie">
+                        <select matNativeControl required class="selector_options_ano_nie">
+                            <option value="Ano">Áno</option>
+                            <option value="Nie">Nie</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="rokov6_header">Počet detí do 6 rokov</h3>
+                <div class="do_6_rokov">
+                    <mat-form-field appearanance="fill" class="selector_do_6_rokov">
+                        <select matNativeControl required class="selector_do6r">
+                            <option value="6r0">0</option>
+                            <option value="6r1">1</option>
+                            <option value="6r2">2</option>
+                            <option value="6r3">3</option>
+                            <option value="6r4">4</option>
+                            <option value="6r5">5</option>
+                            <option value="6r6">6</option>
+                            <option value="6r7">7</option>
+                            <option value="6r8">8</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="od6do15_header">Počet detí od 6 do 15 rokov</h3>
+                <div class="od6do15">
+                    <mat-form-field appearanance="fill" class="od6do15">
+                        <select matNativeControl required class="selector_od6do15">
+                            <option value="6do15r0">0</option>
+                            <option value="6do15r1">1</option>
+                            <option value="6do15r2">2</option>
+                            <option value="6do15r3">3</option>
+                            <option value="6do15r4">4</option>
+                            <option value="6do15r5">5</option>
+                            <option value="6do15r6">6</option>
+                            <option value="6do15r7">7</option>
+                            <option value="6do15r8">8</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="nad15_header">Počet detí nad 15 rokov</h3>
+                <div class="nad15">
+                    <mat-form-field appearanance="fill" class="selector_nad15">
+                        <select matNativeControl required class="selector_nad15_rokov">
+                            <option value="nad15r0">0</option>
+                            <option value="nad15r1">1</option>
+                            <option value="nad15r2">2</option>
+                            <option value="nad15r3">3</option>
+                            <option value="nad15r4">4</option>
+                            <option value="nad15r5">5</option>
+                            <option value="nad15r6">6</option>
+                            <option value="nad15r7">7</option>
+                            <option value="nad15r8">8</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <button class="submit_button">
+                Submit
+            </button>
+            
+        </div>
+    </div>
+
+</div>

@@ -11,6 +11,10 @@
     height: 50px;
 }
 
+body{
+    overflow: hidden;
+}
+
 nav{
     display: flex;
     align-items: center;
