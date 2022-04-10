@@ -1,4 +1,5 @@
 import { Component, NgModule, OnInit } from '@angular/core';
+import { monthSalary } from './charts';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,8 @@ import { Component, NgModule, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor() { Object.assign(this,{monthSalary})}
 
   ngOnInit(): void {
   }
