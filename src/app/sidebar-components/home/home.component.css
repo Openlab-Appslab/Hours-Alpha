@@ -29,11 +29,29 @@ h2{
     padding: 13px;
 }
 
-h3{
+h4{
+    color: #00986F;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.big{
     color: #c7c7c7;
     font-size: 30px;
-    margin-left: 300px;
+    margin-left: 20px;
 }
+
+.big2{
+    color: #c7c7c7;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.avatar{
+    padding-left: 75%;
+    position: inherit;
+}
+
 
 .edit_container{
     float: right;
@@ -198,6 +216,7 @@ mat-divider{
 
 .field_v2 .field__label-wrap{
     overflow: hidden;
+    position: inherit;
 }
 
 .field_v2 .field__label-wrap::after{
@@ -242,14 +261,16 @@ mat-divider{
     background-color: #008360;
     border: none;
     color: white;
-    width: 450px;
-    height: 50px;
-    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 15px;
+    margin-left: 75%;
+    position: relative;
 }
 
 .submit_button:hover{
