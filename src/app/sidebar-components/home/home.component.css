@@ -4,7 +4,6 @@ body{
     
 }
 
-
 .home_heading{
     color: black;
     font-size: 45px;
@@ -49,17 +48,18 @@ h3{
     background-color: #1D2026;
     float: left;
     width: 70%;
-    height: 460px;
+    height: 60%;
     margin-top: 1%;
     border-radius: 10px;
     margin-left: 1%;
+    margin-bottom: 1%;
 }
 
 .graph_2{
     background-color: #1D2026;
     float: right;
     width: 27%;
-    height: 460px;
+    height: 60%;
     margin-top: 1%;
     margin-left: 1%;
     margin-right: 1%;

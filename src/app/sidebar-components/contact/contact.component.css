@@ -1,6 +1,6 @@
 .main{
-    height: 500px;
-    width: 700px;
+    height: auto;
+    width: auto;
     background-color: #1D2026;
     position: absolute;
     left: 42%;
@@ -180,12 +180,12 @@
 .page{
     box-sizing: border-box;
     width: 100%;
-    max-width: 480px;
-    margin: auto;
+    height: 10%;
+    max-width: 480px; 
+    margin: 20px;
     padding: 1rem;
-
     display: grid;
-    grid-gap: 30px;
+    /* grid-gap: 30px; */
 }
 
 .submit_button{
