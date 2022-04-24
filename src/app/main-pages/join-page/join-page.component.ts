@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegisterService } from 'src/app/service/register.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-join-page',
@@ -11,8 +11,8 @@ import { RegisterService } from 'src/app/service/register.service';
 export class JoinPageComponent implements OnInit {
 
   constructor(
-    private readonly registerService: RegisterService,
-    private readonly router: Router
+    private readonly router: Router,
+    private readonly authService: AuthService,
   ) { }
 
   ngOnInit(): void {
@@ -26,18 +26,18 @@ export class JoinPageComponent implements OnInit {
     repeatPassword: new FormControl('', Validators.required)
   })
 
-  login(): void {
+  register(): void {
     if(this.signUpGroup.valid) {
       const firstName = this.signUpGroup.value.firstName;
       const lastName = this.signUpGroup.value.lastName;
       const email = this.signUpGroup.value.email;
       const password = this.signUpGroup.value.password;
-      const repeatPassword = this.signUpGroup.value.repeatPassword;
+      // const repeatPassword = this.signUpGroup.value.repeatPassword;
         
       /*if(password == repeatPassword){
         const finalPassword = password;*/
 
-          this.registerService.register(firstName, lastName, email, password)
+          this.authService.register(firstName, lastName, email, password)
         .subscribe(() => this.router.navigateByUrl('/login'));
       /*}*/
     } 

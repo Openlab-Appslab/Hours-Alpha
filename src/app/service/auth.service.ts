@@ -3,6 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +15,7 @@ export class AuthService {
   token: string ='';
 
   constructor(
-    private readonly httpClient: HttpClient
+    private readonly http: HttpClient
   ) { }
 
   getToken(): string {
@@ -32,9 +36,18 @@ export class AuthService {
       }),
       withCredentials: true
     };
-    return this.httpClient.get('http://localhost:8080/Auth/Login', options).pipe(
+    return this.http.get('http://localhost:8080/Auth/Login', options).pipe(
       tap(() => this.token = token)
     );
+  }
+
+  register(firstName: string, lastName: string, email: string, password: string): Observable<any> {
+    return this.http.post('http://localhost:8080/noAuth/addNewEmployee', {
+      firstName,
+      lastName,
+      email,
+      password,
+    }, httpOptions);
   }
 
   logout(): void {

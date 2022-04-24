@@ -1,6 +1,6 @@
 <div  class="main">
     <div class="form_div">
-        <form class="main_form" [formGroup]="signUpGroup">
+        <form class="main_form" [formGroup]="signUpGroup" (ngSubmit)="register()">
                 <h1>Sign In</h1>
     
                 <div class="div_first_name">
@@ -35,7 +35,7 @@
 
                 <div class="div_btn">
                     <button class="cancel_btn" type="button" routerLink="/landing">Cancel</button>
-                    <button class="confirm_btn" type="submit" [disabled]="!signUpGroup.valid">Sign In</button>
+                    <button class="confirm_btn" type="submit" [disabled]="!signUpGroup.valid" type="submit">Sign In</button>
                 </div> 
         </form>
     </div>
