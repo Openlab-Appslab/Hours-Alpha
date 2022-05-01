@@ -6,8 +6,14 @@
             <input   type="email" placeholder="Email" formControlName="email" required>
             <label><h3 class="pass_input">Password</h3></label><br>
             <input type="password" placeholder="Password" formControlName="password" required><br>
-            <input class="checkbox" type="checkbox" id="keepsigned"> Remeber Me
-            <br>
+            <input  #saveCheckedEmployerCheckBox 
+                    class="checkbox" 
+                    type="checkbox" 
+                    id="saveCheckedEmployerCheckBox" 
+                    [checked]="checkedEmployer" 
+                    (change)="onCheckedEmployer(saveCheckedEmployerCheckBox.checked)"> 
+                    Employer Log In <br>
+                    
             <button class="log_button" [disabled]="!loginGroup.valid" type="submit">Log In</button> 
         </form>
     </div>

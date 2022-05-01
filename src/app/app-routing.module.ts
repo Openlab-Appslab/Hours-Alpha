@@ -10,6 +10,7 @@ import { HomeComponent } from './sidebar-components/home/home.component';
 import { ContactComponent } from './sidebar-components/contact/contact.component';
 import { CalculatorComponent } from './sidebar-components/calculator/calculator.component';
 import { InfoComponent } from './sidebar-components/info/info.component';
+import { EmployerDashbaordComponent } from './employer view/employer-dashbaord/employer-dashbaord.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "landing", pathMatch: "full"},
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "join", component: JoinPageComponent },
   { path: "login", component: LogInPageComponent },
   { path: "discover", component: DiscoverPageComponent },
+  { path: "emp_dashboard", component: EmployerDashbaordComponent },
   { path: "dashboard", component: DashboardComponent, 
     children: [
     { path: "info", component: InfoComponent },
@@ -42,4 +44,6 @@ export const basicRoutingComponents = [
   ContactComponent,
   CalculatorComponent,
   InfoComponent,
+  EmployerDashbaordComponent,
+  
 ];
