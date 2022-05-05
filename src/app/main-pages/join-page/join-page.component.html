@@ -27,11 +27,15 @@
                     <label class="password_repeat_label" for="password_repeat">Repeat Password</label> <br> 
                     <input type="password" placeholder="Repeat Password" name="password_repeat" class="input_password_repeat" formControlName="repeatPassword" required><br>
                 </div><br>
-    
-                <!-- <label class="container">One
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label> -->
+
+                <input
+                    #saveCheckedEmployerCheckBox 
+                    class="checkbox" 
+                    type="checkbox" 
+                    id="saveCheckedEmployerCheckBox" 
+                    [checked]="checkedEmployer" 
+                    (change)="onCheckedEmployer(saveCheckedEmployerCheckBox.checked)"
+                    formControlName="employerCheckBox"> Employer Register
 
                 <div class="div_btn">
                     <button class="cancel_btn" type="button" routerLink="/landing">Cancel</button>

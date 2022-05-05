@@ -23,8 +23,18 @@ export class JoinPageComponent implements OnInit {
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
-    repeatPassword: new FormControl('', Validators.required)
+    repeatPassword: new FormControl('', Validators.required),
   })
+
+  public checkedEmployer: boolean = false;
+  public employerTrue: String ='';
+
+  public onCheckedEmployer(value: boolean){
+    this.checkedEmployer = value;
+    if(this.checkedEmployer == true){
+      this.employerTrue = 'true';
+    }
+  }
 
   register(): void {
     if(this.signUpGroup.valid) {
@@ -32,12 +42,14 @@ export class JoinPageComponent implements OnInit {
       const lastName = this.signUpGroup.value.lastName;
       const email = this.signUpGroup.value.email;
       const password = this.signUpGroup.value.password;
+      const empTrue = this.employerTrue;
+
       // const repeatPassword = this.signUpGroup.value.repeatPassword;
         
       /*if(password == repeatPassword){
         const finalPassword = password;*/
 
-          this.authService.register(firstName, lastName, email, password)
+          this.authService.register(firstName, lastName, email, password, empTrue)
         .subscribe(() => this.router.navigateByUrl('/login'));
       /*}*/
     } 

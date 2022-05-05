@@ -41,13 +41,23 @@ export class AuthService {
     );
   }
 
-  register(firstName: string, lastName: string, email: string, password: string): Observable<any> {
-    return this.http.post('http://localhost:8080/noAuth/addNewEmployee', {
-      firstName,
-      lastName,
-      email,
-      password,
-    }, httpOptions);
+  register(firstName: string, lastName: string, email: string, password: string, empTrue: String): Observable<any> {
+    if(empTrue == 'true'){
+        return this.http.post('http://localhost:8080/noAuth/addNewEmployer', {
+        firstName,
+        lastName,
+        email,
+        password,
+      }, httpOptions);
+    }
+    else{
+      return this.http.post('http://localhost:8080/noAuth/addNewEmployee', {
+        firstName,
+        lastName,
+        email,
+        password,
+      }, httpOptions);
+    }
   }
 
   logout(): void {

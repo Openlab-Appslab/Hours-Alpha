@@ -23,26 +23,16 @@ export class LogInPageComponent implements OnInit {
     password: new FormControl('', Validators.required)
   });
 
-  public checkedEmployer: boolean;
-
-  public onCheckedEmployer(value: boolean){
-    this.checkedEmployer = value;
-  }
-
   login(): void {
     if(this.loginGroup.valid) {
       const email = this.loginGroup.value.email;
       const password = this.loginGroup.value.password;
 
-      if(this.checkedEmployer == true){
         this.authService.login(email, password)
         .subscribe(() => this.router.navigateByUrl('/emp_dashboard'))
-      }
-      // else if(this.checkedEmployer == false){
-      else{
+        
         this.authService.login(email, password)
         .subscribe(() => this.router.navigateByUrl('/dashboard'));
-      }
     } 
   }
 }
