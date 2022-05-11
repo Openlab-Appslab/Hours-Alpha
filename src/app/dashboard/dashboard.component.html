@@ -2,13 +2,13 @@
     <mat-sidenav [disableClose]="true" mode = "side" opened >
         
         <img class="avatar" src="./user.png" width="75px">
-        <h4 class="name">Jozko Mrkvicka</h4>
+        <h4 class="name">{{ name }}</h4>
         <p class="destinatino">Employee</p>
         <p class="workplace"><strong>KIA MOTORS Slovakia</strong></p> <!--Add more functions in future--> 
 
         <mat-divider></mat-divider>
 
-        <button 
+        <button
             mat-button 
             class="menu-button"
             routerLink = "home">

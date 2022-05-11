@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
+import { HomeComponent } from '../sidebar-components/home/home.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,12 +8,17 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  static SumValue(): any {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(
     private readonly authService: AuthService,
   ) { }
 
   selectedMenu:any = 'Home';
+
+  name = 'Ahoj';
 
   ngOnInit(): void {
   }
