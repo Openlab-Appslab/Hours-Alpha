@@ -4,6 +4,15 @@ body{
     
 }
 
+.save{
+    margin-left: 85%;
+    height: 40px;
+    width: 100px;
+    background-color: #007254;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
 .home_heading{
     color: black;
     font-size: 45px;

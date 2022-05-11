@@ -9,7 +9,7 @@ import { monthSalary } from './charts';
 })
 export class HomeComponent implements OnInit {
 
-  name = 'Ahoj';
+  name = '';
 
   SumValue(){
     return this.name;
