@@ -31,9 +31,9 @@ export class JoinPageComponent implements OnInit {
 
   public onCheckedEmployer(value: boolean){
     this.checkedEmployer = value;
-    if(this.checkedEmployer == true){
-      this.employerTrue = 'true';
-    }
+    // if(this.checkedEmployer == true){
+    //   this.employerTrue = 'true';
+    // }
   }
 
   register(): void {
@@ -42,19 +42,33 @@ export class JoinPageComponent implements OnInit {
       const lastName = this.signUpGroup.value.lastName;
       const email = this.signUpGroup.value.email;
       const password = this.signUpGroup.value.password;
-      const empTrue = this.employerTrue;
+      const isEmployer = this.checkedEmployer;
 
       // const repeatPassword = this.signUpGroup.value.repeatPassword;
         
       /*if(password == repeatPassword){
         const finalPassword = password;*/
 
-          this.authService.register(firstName, lastName, email, password, empTrue)
-        .subscribe(() => this.router.navigateByUrl('/login'));
+          this.authService.register(firstName, lastName, email, password, isEmployer)
+        .subscribe((isEmployer) => {
+          if(isEmployer == true){
+            this.router.navigateByUrl('/emp_dashboard')
+          }
+          else if(isEmployer == false){
+            this.router.navigateByUrl('/dashboard')
+          };
+        })
       /*}*/
     } 
   }
 }
+
+// this.Subscription1 = interval(1000).subscribe((x) =>
+// {
+//     if(this.seconds!=0){
+//           this.seconds -= 1
+//     }
+// });
 
 export const enum PasswordCheckStrength{
   Short,
