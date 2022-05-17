@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
 import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { monthSalary } from './charts';
 
@@ -9,7 +9,10 @@ import { monthSalary } from './charts';
 })
 export class HomeComponent implements OnInit {
 
+  // @Input() hours = '';
+
   name = '';
+  hours_input = '';
 
   SumValue(){
     return this.name;

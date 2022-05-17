@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { CookieService } from 'ngx-cookie-service';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -15,7 +16,8 @@ export class AuthService {
   token: string ='';
 
   constructor(
-    private readonly http: HttpClient
+    private readonly http: HttpClient,
+    private cookies: CookieService,
   ) { }
 
   getToken(): string {
@@ -28,6 +30,10 @@ export class AuthService {
 
   login(email: string, password: string): Observable<any> {
     const info = btoa(`${email}:${password}`);
+
+    this.cookies.set('email', email);
+    this.cookies.set('password', password);
+
     const token = `Basic ${info}`;
     const options = {
       headers: new HttpHeaders({
@@ -41,24 +47,14 @@ export class AuthService {
     );
   }
 
-  register(firstName: string, lastName: string, email: string, password: string, isEmployer: boolean): Observable<any> {
+  register(firstName: string, lastName: string, email: string, password: string, stateEmployer: boolean): Observable<any> {
       return this.http.post('http://localhost:8080/noAuth/registration', {
       email,
       firstName,
       lastName,
       password,
-      isEmployer,
+      stateEmployer,
     }, httpOptions);
-    
-    // else{
-    //   return this.http.post('http://localhost:8080/noAuth/addNewEmployee', {
-    //     firstName,
-    //     lastName,
-    //     email,
-    //     password,
-    //     empTrue,
-    //   }, httpOptions);
-    // }
   }
 
   logout(): void {

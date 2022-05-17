@@ -4,8 +4,8 @@
     <mat-divider></mat-divider>
 
     <div class="main_panel">
-        <div class="hours_container">
-            <h2>Hours This Month:   <strong class="big">206 hours</strong></h2>
+        <div class="hours_container"> 
+            <h2>Hours This Month:   <strong class="big">{{hours_input}} hours   </strong></h2>
             <h4>March 2022:   <strong class="big2">2654 hours</strong></h4>
             <h4>February 2022:   <strong class="big2">2147 hours</strong></h4>
             <h4>January 2022:   <strong class="big2">2054 hours</strong></h4>
@@ -28,12 +28,25 @@
             </label>
 <br>
             <label class="field field_v3" style="margin-left: 2%;">
-                <input class="field__input" placeholder="Your Workplace">
+                <input class="field__input" placeholder="Your Workplace" #hours>
                 <span class="field__label-wrap">
                 <span class="field__label">Workplace</span>
                 </span> 
             </label>
 <br>
+            <div class="hours_inp">
+                <label class="field field_v3" style="margin-left: 2%;">
+                    <input class="field__input" placeholder="Your Workplace" [(ngModel)]="hours_input">
+                    <span class="field__label-wrap">
+                    <span class="field__label">Hours</span>
+                    </span> 
+                </label>
+
+                <button class="plus">
+                    
+                </button>
+            </div>
+           
 <button  class="save">Save</button>
         </div>
     </div>
