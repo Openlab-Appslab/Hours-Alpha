@@ -43,13 +43,13 @@ export class JoinPageComponent implements OnInit {
       console.log("tu to ide");
       
       this.authService.register(firstName, lastName, email, password, stateEmployer)
-        .subscribe((stateEmployer) => {
-          if(stateEmployer == true){
+        .subscribe((response) => {
+          if(response.stateEmployer == true){
             this.router.navigate(['/emp_dashboard'])
             console.log("asdad");
 
           }
-          else if(stateEmployer == false){
+          else if(response.stateEmployer == false){
             this.router.navigate(['/dashboard'])
           };
         })
