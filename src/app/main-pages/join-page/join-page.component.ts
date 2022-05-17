@@ -28,32 +28,31 @@ export class JoinPageComponent implements OnInit {
   })
 
   public checkedEmployer: boolean = false;
-  public employerTrue: String ='';
 
   public onCheckedEmployer(value: boolean){
     this.checkedEmployer = value;
   }
 
   register(): void {
-    if(this.signUpGroup.valid) {
+    // if(this.signUpGroup.valid) {
       const firstName = this.signUpGroup.value.firstName;
       const lastName = this.signUpGroup.value.lastName;
       const email = this.signUpGroup.value.email;
       const password = this.signUpGroup.value.password;
       const stateEmployer = this.checkedEmployer;
-      console.log("this.model");
+      console.log("tu to ide");
       
       this.authService.register(firstName, lastName, email, password, stateEmployer)
-      .subscribe((stateEmployer) => {
-        if(stateEmployer == true){
-          this.router.navigate(['/emp_dashboard'])
-          console.log("asdad");
+        .subscribe((stateEmployer) => {
+          if(stateEmployer == true){
+            this.router.navigate(['/emp_dashboard'])
+            console.log("asdad");
 
-        }
-        else if(stateEmployer == false){
-          this.router.navigate(['/dashboard'])
-        };
-      })
-    } 
+          }
+          else if(stateEmployer == false){
+            this.router.navigate(['/dashboard'])
+          };
+        })
+    // } 
   }
 }

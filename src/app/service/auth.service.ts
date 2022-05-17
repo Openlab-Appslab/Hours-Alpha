@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { first, tap } from 'rxjs/operators';
 import { CookieService } from 'ngx-cookie-service';
 
 const httpOptions = {
@@ -48,6 +48,9 @@ export class AuthService {
   }
 
   register(firstName: string, lastName: string, email: string, password: string, stateEmployer: boolean): Observable<any> {
+    this.cookies.set('firstName', firstName);
+    this.cookies.set('lastName', lastName);
+
       return this.http.post('http://localhost:8080/noAuth/registration', {
       email,
       firstName,

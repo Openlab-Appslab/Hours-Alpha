@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
-import { HomeComponent } from '../sidebar-components/home/home.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,11 +14,15 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private readonly authService: AuthService,
+    private cookies: CookieService,
   ) { }
 
   selectedMenu:any = 'Home';
 
-  name = 'Ahoj';
+  name = 'Jozko Mrkvicka';
+
+  firstName = this.cookies.get('firstName');
+  lastName = this.cookies.get('lastName');
 
   ngOnInit(): void {
   }
