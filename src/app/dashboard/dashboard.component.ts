@@ -19,8 +19,7 @@ export class DashboardComponent implements OnInit {
 
   selectedMenu:any = 'Home';
 
-  name = 'Jozko Mrkvicka';
-
+  role = this.cookies.get('');
   firstName = this.cookies.get('firstName');
   lastName = this.cookies.get('lastName');
 
@@ -29,5 +28,10 @@ export class DashboardComponent implements OnInit {
 
   goTo(paramText: string){
     this.selectedMenu = paramText;
+  }
+
+  clickLogOut(){
+    this.authService.logout();
+    location.reload();
   }
 }

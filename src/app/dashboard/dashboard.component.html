@@ -3,7 +3,7 @@
         
         <img class="avatar" src="./user.png" width="75px">
         <h4 class="name">{{ firstName }} {{ lastName }}</h4>
-        <p class="destinatino">Employee</p>
+        <p class="destinatino"> {{role}} </p>
         <p class="workplace"><strong>KIA MOTORS Slovakia</strong></p> <!--Add more functions in future--> 
 
         <mat-divider></mat-divider>
@@ -28,7 +28,7 @@
             mat-button 
             class="menu-button"
             routerLink = "info">
-                <mat-icon>info</mat-icon> <!--phone_in_talk--> 
+                <mat-icon>info</mat-icon> 
                 <span>Info</span>
         </button><br>
 
@@ -36,7 +36,7 @@
             mat-button 
             class="menu-button"
             routerLink = "contact">
-                <mat-icon>contact_support</mat-icon> <!--phone_in_talk--> 
+                <mat-icon>contact_support</mat-icon> 
                 <span>Contact</span>
         </button><br>
 
@@ -44,8 +44,9 @@
 
         <button 
             mat-button 
-            class="menu-button">
-                <mat-icon>logout</mat-icon> <!--phone_in_talk--> 
+            class="menu-button"
+            (click)="clickLogOut()">
+                <mat-icon>logout</mat-icon> 
                 <span>Log Out</span>
         </button><br>
 

@@ -46,8 +46,6 @@ export class JoinPageComponent implements OnInit {
         .subscribe((response) => {
           if(response.stateEmployer == true){
             this.router.navigate(['/emp_dashboard'])
-            console.log("asdad");
-
           }
           else if(response.stateEmployer == false){
             this.router.navigate(['/dashboard'])
