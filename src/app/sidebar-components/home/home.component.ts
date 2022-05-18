@@ -1,4 +1,5 @@
 import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { NumberValueAccessor } from '@angular/forms';
 import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { monthSalary } from './charts';
 
@@ -12,7 +13,15 @@ export class HomeComponent implements OnInit {
   // @Input() hours = '';
 
   name = '';
-  hours_input = '';
+
+  input_value: number = 0;
+  final_value: number = 0;
+  actual_value: number = 0;
+  
+
+  AdValue(){
+    this.actual_value = this.actual_value + +this.input_value;
+  }
 
   SumValue(){
     return this.name;

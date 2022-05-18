@@ -5,7 +5,7 @@
 
     <div class="main_panel">
         <div class="hours_container"> 
-            <h2>Hours This Month:   <strong class="big">{{hours_input}} hours   </strong></h2>
+            <h2>Hours This Month:   <strong class="big">{{actual_value}} hours   </strong></h2>
             <h4>March 2022:   <strong class="big2">2654 hours</strong></h4>
             <h4>February 2022:   <strong class="big2">2147 hours</strong></h4>
             <h4>January 2022:   <strong class="big2">2054 hours</strong></h4>
@@ -36,13 +36,13 @@
 <br>
             <div class="hours_inp">
                 <label class="field field_v3" style="margin-left: 2%;">
-                    <input class="field__input" placeholder="Your Workplace" [(ngModel)]="hours_input">
+                    <input class="field__input" placeholder="Your Workplace" [(ngModel)]="input_value">
                     <span class="field__label-wrap">
                     <span class="field__label">Hours</span>
                     </span> 
                 </label>
 
-                <button class="plus">
+                <button (click)="AdValue()" class="plus">
                     
                 </button>
             </div>
