@@ -1,7 +1,7 @@
-/* .avatar{
+.avatar{
     margin-top: 32px;
-    background-image: url(./user.png);
-} */
+    background-image: url(./manager.png);
+} 
 
 mat-sidenav{
     width: 325px;

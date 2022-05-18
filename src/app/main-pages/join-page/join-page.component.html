@@ -3,7 +3,7 @@
         <form 
             class="main_form" 
             [formGroup]="signUpGroup" 
-            (ngSubmit)="register()">
+            (ngSubmit)="register()"> 
 
                 <h1>Sign Up</h1>
     
@@ -16,7 +16,7 @@
                     <label class="last_name_label" for="last_name">Last Name</label><br>
                     <input type="text" placeholder="Your Last Name" name="last_name" class="input_last_name" formControlName="lastName" required><br>
                 </div>
-                
+                 
                 <div class="div_email">
                     <label class="email_label" for="email">E-Mail</label><br>
                     <input type="email" placeholder="Enter E-Mail" name="email" class="input_email" formControlName="email" required><br>

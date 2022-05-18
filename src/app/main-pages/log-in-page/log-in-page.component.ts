@@ -21,7 +21,7 @@ export class LogInPageComponent implements OnInit {
   }
 
   loginGroup = new FormGroup({ 
-    email: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required), 
     password: new FormControl('', Validators.required)
   });
 
@@ -32,14 +32,8 @@ export class LogInPageComponent implements OnInit {
       const email = this.loginGroup.value.email;
       const password = this.loginGroup.value.password;
 
-      if(this.stateEmployer == 'true'){
-        this.authService.login(email, password)
-        .subscribe(() => this.router.navigateByUrl('/emp_dashboard'))
-      }
-      else{
-        this.authService.login(email, password)
-        .subscribe(() => this.router.navigateByUrl('/dashboard'));
-      }
+      this.authService.login(email, password)
+      .subscribe(() => this.router.navigateByUrl('/emp_dashboard'))
     }
   }
 }

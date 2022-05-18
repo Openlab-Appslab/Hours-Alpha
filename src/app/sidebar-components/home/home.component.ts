@@ -1,6 +1,4 @@
 import { Component, Input, NgModule, OnInit } from '@angular/core';
-import { NumberValueAccessor } from '@angular/forms';
-import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { monthSalary } from './charts';
 
 @Component({

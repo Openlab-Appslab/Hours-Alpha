@@ -40,7 +40,6 @@ export class JoinPageComponent implements OnInit {
       const email = this.signUpGroup.value.email;
       const password = this.signUpGroup.value.password;
       const stateEmployer = this.checkedEmployer;
-      console.log("tu to ide");
       
       this.authService.register(firstName, lastName, email, password, stateEmployer)
         .subscribe((response) => {

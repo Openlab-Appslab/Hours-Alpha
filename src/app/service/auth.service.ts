@@ -44,7 +44,7 @@ export class AuthService {
       }),
       withCredentials: true
     };
-    return this.http.get('http://localhost:8080/Auth/Login', options).pipe(
+    return this.http.post('http://localhost:8080/Auth/login', options).pipe(
       tap(() => this.token = token)
     );
   }
