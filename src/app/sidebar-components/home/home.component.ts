@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
 
   name = '';
 
-  input_value: number;
-  actual_value: number;
+  input_value: number = 0;
+  actual_value: number = 0;
   
 
   AdValue(){
