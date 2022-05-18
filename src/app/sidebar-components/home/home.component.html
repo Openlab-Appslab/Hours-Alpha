@@ -26,6 +26,16 @@
                     <span class="field__label">Name</span>
                     </span>
             </label>
+
+ 
+            <label class="field field_v3" style="margin-left: 2%;">
+                    <input class="field__input" placeholder="Your Workplace" [(ngModel)]="input_value">
+                    <span class="field__label-wrap">
+                    <span class="field__label">Hours</span>                        
+                </span> 
+            </label>
+            <button (click)="AdValue()" class="plus"></button>
+
 <br>
             <label class="field field_v3" style="margin-left: 2%;">
                 <input class="field__input" placeholder="Your Workplace" #hours>
@@ -34,18 +44,6 @@
                 </span> 
             </label>
 <br>
-            <div class="hours_inp">
-                <label class="field field_v3" style="margin-left: 2%;">
-                    <input class="field__input" placeholder="Your Workplace" [(ngModel)]="input_value">
-                    <span class="field__label-wrap">
-                    <span class="field__label">Hours</span>
-                    </span> 
-                </label>
-
-                <button (click)="AdValue()" class="plus">
-                    
-                </button>
-            </div>
            
 <button  class="save">Save</button>
         </div>

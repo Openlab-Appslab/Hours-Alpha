@@ -4,8 +4,18 @@ body{
     
 }
 
+.plus {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #007254;
+    background-image: url(src\assets\images\icons8-plus-15.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .save{
-    margin-left: 85%;
+    margin-left: 80%;
     height: 40px;
     width: 100px;
     background-color: #007254;
