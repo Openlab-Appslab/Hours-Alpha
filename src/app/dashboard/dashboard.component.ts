@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,6 +16,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private readonly authService: AuthService,
     private cookies: CookieService,
+    private router: Router,
   ) { }
 
   selectedMenu:any = 'Home';
@@ -32,6 +34,6 @@ export class DashboardComponent implements OnInit {
 
   clickLogOut(){
     this.authService.logout();
-    location.reload();
+    this.router.navigate(['/login'])
   }
 }

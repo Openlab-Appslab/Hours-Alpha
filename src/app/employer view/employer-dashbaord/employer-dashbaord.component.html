@@ -1,1 +1,52 @@
-<p>employer-dashbaord works!</p>
+<mat-sidenav-container>
+    <mat-sidenav [disableClose]="true" mode = "side" opened >
+        
+        <!-- <img class="avatar" src="./user.png" width="75px"> -->
+        <h4 class="name">{{ firstName }} {{ lastName }}</h4>
+        <p class="destinatino"> Employer </p>
+        <p class="workplace"><strong>KIA MOTORS Slovakia</strong></p> <!--Add more functions in future--> 
+
+        <mat-divider></mat-divider>
+
+        <button
+            mat-button 
+            class="menu-button"
+            routerLink = "employees">
+                <mat-icon>face</mat-icon>
+                <span>Employees</span>
+        </button><br>   
+
+        <button
+            mat-button 
+            class="menu-button"
+            routerLink = "company">
+                <mat-icon> business</mat-icon>
+                <span>Company</span>
+        </button><br> 
+
+        <button
+            mat-button 
+            class="menu-button"
+            routerLink = "globalStats">
+                <mat-icon> insert_chart</mat-icon>
+                <span>Global Stats</span>
+        </button><br> 
+
+        <mat-divider></mat-divider>
+
+        <button 
+            mat-button 
+            class="menu-button"
+            (click)="clickLogOut()">
+                <mat-icon>logout</mat-icon> 
+                <span>Log Out</span>
+        </button><br>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet> 
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

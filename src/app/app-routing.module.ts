@@ -11,6 +11,9 @@ import { ContactComponent } from './sidebar-components/contact/contact.component
 import { CalculatorComponent } from './sidebar-components/calculator/calculator.component';
 import { InfoComponent } from './sidebar-components/info/info.component';
 import { EmployerDashbaordComponent } from './employer view/employer-dashbaord/employer-dashbaord.component';
+import { GlobalstatsComponent } from './employer view/globalstats/globalstats.component';
+import { CompanyComponent } from './employer view/company/company.component';
+import { EmployeesComponent } from './employer view/employees/employees.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "landing", pathMatch: "full"},
@@ -18,15 +21,19 @@ const routes: Routes = [
   { path: "join", component: JoinPageComponent },
   { path: "login", component: LogInPageComponent },
   { path: "discover", component: DiscoverPageComponent },
-  { path: "emp_dashboard", component: EmployerDashbaordComponent },
+  { path: "emp_dashboard", component: EmployerDashbaordComponent,
+    children: [
+      { path: "employees", component: EmployeesComponent },
+      { path: "company", component: CompanyComponent },
+      { path: "globalStats", component: GlobalstatsComponent, }
+    ]},
   { path: "dashboard", component: DashboardComponent, 
     children: [
     { path: "info", component: InfoComponent },
     { path: "home", component: HomeComponent },
     { path: "calculator", component: CalculatorComponent },
     { path: "contact", component: ContactComponent },
-  ] },
-    
+  ] },  
 ];
 
 @NgModule({
@@ -45,5 +52,8 @@ export const basicRoutingComponents = [
   CalculatorComponent,
   InfoComponent,
   EmployerDashbaordComponent,
-  
+  CompanyComponent,
+  EmployeesComponent,
+  GlobalstatsComponent,
+
 ];
