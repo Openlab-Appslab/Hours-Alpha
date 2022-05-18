@@ -10,12 +10,10 @@ import { monthSalary } from './charts';
 })
 export class HomeComponent implements OnInit {
 
-  // @Input() hours = '';
-
   name = '';
 
-  input_value: number = 0;
-  actual_value: number = 0;
+  input_value: number;
+  actual_value: number;
   
 
   AdValue(){

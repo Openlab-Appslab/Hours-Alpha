@@ -117,7 +117,7 @@ mat-divider{
 
 .field__input{ 
     --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
-    
+    color: #767676;
     background-color: transparent;
     border-radius: 0;
     border: none; 
