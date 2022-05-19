@@ -14,12 +14,7 @@
 
         <div class="edit_container">
             <h2>Your Profile</h2>
-            <!-- <div>
-                <img class="avatar" src="./user.png" height="90px" alt="avatar picker">
-                <button class="submit_button">
-                    Submit
-                </button>
-            </div> -->
+
             <label class="field field_v3" style="margin-left: 2%; margin-bottom: 2%;">
                     <input class="field__input" [(ngModel)]="name" placeholder="Your Name"/>
                     <span class="field__label-wrap">
@@ -29,12 +24,12 @@
 
  
             <label class="field field_v3" style="margin-left: 2%;">
-                    <input class="field__input" placeholder="Your Hours" [(ngModel)]="input_value">
+                    <input name="hours_input" class="field__input" placeholder="Your Hours" [(ngModel)]="input_value">
                     <span class="field__label-wrap">
                     <span class="field__label">Hours</span>                        
                 </span> 
             </label>
-            <button (click)="AdValue()" class="plus"></button>
+            <button (click)="AdValue()" (keyup.enter)="AdValue()" class="plus"></button>
 
 <br>
             <label class="field field_v3" style="margin-left: 2%;">

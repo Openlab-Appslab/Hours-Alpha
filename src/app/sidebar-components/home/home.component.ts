@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   name = '';
 
-  input_value: number = 0;
+  input_value: number;
   actual_value: number = 0;
   
 
