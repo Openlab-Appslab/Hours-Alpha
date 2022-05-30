@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./log-in-page.component.css']
 })
 export class LogInPageComponent implements OnInit {
- 
+
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router,
@@ -20,8 +20,8 @@ export class LogInPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginGroup = new FormGroup({ 
-    email: new FormControl('', Validators.required), 
+  loginGroup = new FormGroup({
+    email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
 
@@ -33,7 +33,13 @@ export class LogInPageComponent implements OnInit {
       const password = this.loginGroup.value.password;
 
       this.authService.login(email, password)
-      .subscribe(() => this.router.navigateByUrl('/emp_dashboard'))
+      .subscribe(response => {
+        if (response.employer) {
+          this.router.navigateByUrl('/emp_dashboard');
+        } else {
+          this.router.navigateByUrl('/dashboard');
+        }
+      })
     }
   }
 }

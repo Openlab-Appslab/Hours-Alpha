@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 import { CookieService } from 'ngx-cookie-service';
+import { LoginResponse } from '../login';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -30,7 +31,7 @@ export class AuthService {
 
   employerString: string = '';
 
-  login(email: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<LoginResponse> {
     const info = btoa(`${email}:${password}`);
 
     this.cookies.set('email', email);
@@ -44,7 +45,7 @@ export class AuthService {
       }),
       withCredentials: true
     };
-    return this.http.post('http://localhost:8080/Auth/login', options).pipe(
+    return this.http.get<LoginResponse>('http://localhost:8080/Auth/login', options).pipe(
       tap(() => this.token = token)
     );
   }
@@ -52,7 +53,7 @@ export class AuthService {
   register(firstName: string, lastName: string, email: string, password: string, stateEmployer: boolean): Observable<any> {
     this.cookies.set('firstName', firstName);
     this.cookies.set('lastName', lastName);
-  
+
     if(stateEmployer == true){
       this.employerString = 'true';
     }
