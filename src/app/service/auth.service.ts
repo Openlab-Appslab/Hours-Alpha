@@ -29,10 +29,13 @@ export class AuthService {
     return !!this.token;
   }
 
+  sendEmail: string = '';
+
   employerString: string = '';
 
   login(email: string, password: string): Observable<LoginResponse> {
     const info = btoa(`${email}:${password}`);
+    const sendEmail = email;
 
     this.cookies.set('email', email);
     this.cookies.set('password', password);
@@ -46,14 +49,14 @@ export class AuthService {
       withCredentials: true
     };
     return this.http.get<LoginResponse>('http://localhost:8080/Auth/login', options).pipe(
-      tap(() => this.token = token)
-    );
+      tap(() => this.token = token),
+    );    
   }
 
   register(firstName: string, lastName: string, email: string, password: string, stateEmployer: boolean): Observable<any> {
     this.cookies.set('firstName', firstName);
     this.cookies.set('lastName', lastName);
-
+  
     if(stateEmployer == true){
       this.employerString = 'true';
     }
