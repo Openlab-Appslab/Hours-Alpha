@@ -30,7 +30,7 @@
 
 .field__input{ 
     --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
-    
+    color: #767676;
     background-color: transparent;
     border-radius: 0;
     border: none; 
@@ -185,7 +185,6 @@
     margin: 20px;
     padding: 1rem;
     display: grid;
-    /* grid-gap: 30px; */
 }
 
 .submit_button{

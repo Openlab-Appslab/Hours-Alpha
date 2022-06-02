@@ -11,10 +11,14 @@
 
 .a2022{
     position: absolute;
+    background-color: #008360;
+    color: white;
 }
 
 .a2021{
     margin-right: 5px;
+    background-color: #008360;
+    color: white;
 }
 
 .a2021:active{
@@ -130,7 +134,7 @@
 
 .field__input{ 
     --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
-    
+    color: #767676;
     background-color: transparent;
     border-radius: 0;
     border: none; 
@@ -284,9 +288,7 @@
     margin: 20px;
     padding: 1rem;
     height: 10%;
-
     display: grid;
-    /* grid-gap: 30px; */
 }
 
 .submit_button{
