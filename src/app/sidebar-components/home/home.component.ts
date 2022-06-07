@@ -1,6 +1,7 @@
 import { Component, Input, NgModule, OnInit } from '@angular/core';
 import { monthSalary } from './charts';
 import { HoursService } from 'src/app/service/hours.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-home',
@@ -11,30 +12,36 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private readonly hoursService: HoursService,
+    private cookies: CookieService,
   ) { Object.assign(this,{monthSalary})}
 
-  name = '';
+  workPlace: string = '';
 
-  input_value: number;
+  input_value: number = 0;
   actual_value: number = 0;
 
   AdValue(){
     this.actual_value = this.actual_value + +this.input_value;
+    // console.log("adValue works")
   }
 
-  register(): void { 
-    const sendHours = this.actual_value;
-      this.hoursService.sendHours(sendHours)
+  sendEmployeeInfo(): void { 
+    const workPlace = this.workPlace;
+    const numberOfHours = this.actual_value;
+
+    location.reload();
+
+      this.hoursService.sendEmployeeInfo(workPlace, numberOfHours)
         .subscribe((result) => {
           console.log(result);
         })
   }
 
-  SumValue(){
-    return this.name;
+  workPlaceWrite(){
+    // console.log("haha")
+    console.log(this.workPlace);
   }
 
   ngOnInit(): void {
   }
-
 }

@@ -19,6 +19,8 @@ export class DashboardComponent implements OnInit {
     private router: Router,
   ) { }
 
+  workPlaceCookies = this.cookies.get('workPlace');
+
   selectedMenu:any = 'Home';
 
   role = this.cookies.get('');

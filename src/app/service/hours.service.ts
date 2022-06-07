@@ -17,9 +17,17 @@ export class HoursService {
     private cookies: CookieService,
   ) { }
 
-  sendHours(sendHours: number): Observable<any>{
-    return this.http.post('http://localhost:8080/hodinky', {
-      sendHours,
+  sendEmployeeInfo(workPlace: string, numberOfHours: number): Observable<any>{
+    // this.cookies.set('numberOfHours', numberOfHours);
+    this.cookies.set('workPlace', workPlace);
+    
+    return this.http.post('http://localhost:8080/Employee/addWorkInfo', {
+      numberOfHours,
+      workPlace,
     }, httpOptions);
   }
+
+  // public addUser(): Observable<> {
+  //   return this.http.post<>('${this.apiServerUrl}/user/add');
+  // }
 }
