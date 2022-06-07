@@ -29,12 +29,8 @@ export class HomeComponent implements OnInit {
     const workPlace = this.workPlace;
     const numberOfHours = this.actual_value;
 
-    location.reload();
-
       this.hoursService.sendEmployeeInfo(workPlace, numberOfHours)
-        .subscribe((result) => {
-          console.log(result);
-        })
+        
   }
 
   workPlaceWrite(){
@@ -43,5 +39,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 }

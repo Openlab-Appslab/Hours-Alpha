@@ -17,14 +17,36 @@ export class HoursService {
     private cookies: CookieService,
   ) { }
 
-  sendEmployeeInfo(workPlace: string, numberOfHours: number): Observable<any>{
-    // this.cookies.set('numberOfHours', numberOfHours);
+  sendEmployeeInfo(workPlace: string, numberOfHours: number){
+
+    let authString = `${this.cookies.get("email")}:${this.cookies.get("password")}`
+
     this.cookies.set('workPlace', workPlace);
-    
-    return this.http.post('http://localhost:8080/Employee/addWorkInfo', {
-      numberOfHours,
-      workPlace,
-    }, httpOptions);
+
+    fetch('http://localhost:8080/employee/addWorkInfo' +workPlace + "/" + numberOfHours, {
+      method: 'POST',
+      headers: new Headers({
+      'Authorization': 'Basic '+btoa(authString), 
+      'Content-Type': "application/json; charset=utf8",
+    }),
+    // body: JSON.stringify(name, problem),
+    })
+    .then(() => {
+      console.log('Success!');
+      location.reload();
+    })
+    .catch((error) => {
+      console.error('Error:' , error);
+    });
+  }  
+
+  getEmployeeHours(numberOfHours: number){
+    fetch('http://localhost:8080/employee/addWorkInfo' + numberOfHours, {
+      method: 'GET',
+      headers:{
+        'Content-Type': "application/json; charset=utf8",
+      }
+    })
   }
 
   // public addUser(): Observable<> {
