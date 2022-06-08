@@ -77,4 +77,24 @@ export class AuthService {
   logout(): void {
     this.token = '';
   }
+
+  // sendSupport (name:string, problem:string){
+
+  //   let authString = `${this.cookies.get("username")}:${this.cookies.get("password")}`
+
+  //   fetch('http://localhost:8080/support/' +name + "/" + problem, {
+  //     method: 'GET',
+  //     headers: new Headers({
+  //     'Authorization': 'Basic '+btoa(authString), 
+  //     'Content-Type': "application/json; charset=utf8",
+  //   }),
+
+  //   })
+  //   .then(() => {
+  //     console.log('Success!');
+  //   })
+  //   .catch((error) => {
+  //     console.error('Error:' , error);
+  //   });
+  // }  
 }
