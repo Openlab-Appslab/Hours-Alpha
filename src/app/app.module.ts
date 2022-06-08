@@ -13,11 +13,13 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     basicRoutingComponents,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,

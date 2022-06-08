@@ -40,11 +40,26 @@ export class HoursService {
     });
   }  
 
-  getHours(numberOfHours: number):Observable <any>  {
-    return this.http.get<any[]>('http://localhost:8080/employee/addWorkInfo' + numberOfHours)
-  }
+  getHours(numberOfHours: number){
+    return this.http.get<any>('http://localhost:8080/employee/showAllWorkInfo' + numberOfHours)
 
-  // public addUser(): Observable<> {
-  //   return this.http.post<>('${this.apiServerUrl}/user/add');
+  //   let authString = `${this.cookies.get("email")}:${this.cookies.get("password")}`
+
+  //   fetch('http://localhost:8080/employee/addWorkInfo' + numberOfHours, {
+  //     method: 'GET',
+  //     headers: new Headers({
+  //     'Authorization': 'Basic '+btoa(authString), 
+  //     'Content-Type': "application/json; charset=utf8",
+  //   }),
+  //   // body: JSON.stringify(name, problem),
+  //   })
+  //   .then(() => {
+  //     console.log('Successfully got hours!');
+  //     // location.reload();
+  //   })
+  //   .catch((error) => {
+  //     console.error('Error:' , error);
+  //   });
   // }
+  }
 }

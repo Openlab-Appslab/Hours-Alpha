@@ -6,7 +6,7 @@
     <div class="main_panel">
         <div class="hours_container"> 
             <h2>Hours This Month:   <strong class="big">{{actual_value}} hours   </strong></h2>
-            <h4>March 2022:   <strong class="big2">2654 hours {{ displayWorkedHours }}</strong></h4>
+            <h4>March 2022:   <strong class="big2">2654 hours {{ totalWorkedHours }}</strong></h4>
             <h4>February 2022:   <strong class="big2">2147 hours</strong></h4>
             <h4>January 2022:   <strong class="big2">2054 hours</strong></h4>
             <h4>December 2021:   <strong class="big2">2798 hours</strong></h4>
@@ -49,24 +49,47 @@
             <table>
                 <tr>
                     <td>
-                        <!-- <ngx-charts-area-chart
-                             [results]="productSalesMulti"
-                                [view]="view"
-                                [scheme]="colorScheme"
-                                [legend]="legend"
-                                [showXAxisLabel]="showXAxisLabel"
-                                [showYAxisLabel]="showYAxisLabel"
-                                [xAxis]="xAxis"
-                                [yAxis]="yAxis"
-                                [xAxisLabel]="xAxisLabel"
-                                [yAxisLabel]="yAxisLabel"> 
-                        </ngx-charts-area-chart> -->
-                        
-                    </td>  
+                        <ngx-charts-bar-vertical [results]="productSales"
+                            [view]="view"
+                            [scheme]="colorScheme"
+                            [schemeType]="schemeType"
+                            [gradient]="gradient"
+                            [xAxis]="xAxis"
+                            [yAxis]="yAxis"
+                            [legend]="legend"
+                            [showXAxisLabel]="showXAxisLabel"
+                            [showYAxisLabel]="showYAxisLabel"
+                            [xAxisLabel]="xAxisLabel"
+                            [yAxisLabel]="yAxisLabel"
+                            [legendTitle]="legendTitle"
+                            [legendPosition]="legendPosition"
+                            [animations]="animations"
+                            [showGridLines]="showGridLines"
+                            [showDataLabel]="showDataLabel"
+                            [barPadding]="barPadding"
+                            [tooltipDisabled]="tooltipDisabled"
+                            [roundEdges]="roundEdges">
+                        </ngx-charts-bar-vertical>
+                    </td>
+                </tr>
             </table>
+
+            <!-- <ngx-charts-area-chart
+                [results]="productSalesMulti"
+                    [view]="view"
+                    [scheme]="colorScheme"
+                    [legend]="legend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxis]="xAxis"
+                    [yAxis]="yAxis"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel">
+            </ngx-charts-area-chart> -->
         </div>
         <div class="graph_2">
             <h2>Export</h2>
+            <button class="download_btn">Download</button>
         </div>
     </div>
 </div>
