@@ -33,20 +33,15 @@ export class HoursService {
     })
     .then(() => {
       console.log('Success!');
-      location.reload();
+      // location.reload();
     })
     .catch((error) => {
       console.error('Error:' , error);
     });
   }  
 
-  getEmployeeHours(numberOfHours: number){
-    fetch('http://localhost:8080/employee/addWorkInfo' + numberOfHours, {
-      method: 'GET',
-      headers:{
-        'Content-Type': "application/json; charset=utf8",
-      }
-    })
+  getHours(numberOfHours: number):Observable <any>  {
+    return this.http.get<any[]>('http://localhost:8080/employee/addWorkInfo' + numberOfHours)
   }
 
   // public addUser(): Observable<> {
