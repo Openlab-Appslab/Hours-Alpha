@@ -78,11 +78,12 @@ export class AuthService {
     this.token = '';
   }
 
-  sendSupport (name:string, problem:string){
+  sendSupport (problem:string){
 
+    
     let authString = `${this.cookies.get("username")}:${this.cookies.get("password")}`
 
-    fetch('http://localhost:8080/support/' +name + "/" + problem, {
+    fetch('http://localhost:8080/both/support' + problem, {
       method: 'GET',
       headers: new Headers({
       'Authorization': 'Basic '+btoa(authString), 
@@ -91,7 +92,7 @@ export class AuthService {
 
     })
     .then(() => {
-      console.log('Success!');
+      console.log('Success send support!');
     })
     .catch((error) => {
       console.error('Error:' , error);

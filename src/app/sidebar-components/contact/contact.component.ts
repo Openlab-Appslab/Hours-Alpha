@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { sendSupport } from './support';
-import { FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/service/auth.service';
 
@@ -10,10 +10,8 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  name: string = '';
-  problem: string = '';
 
-  model = new sendSupport('', '');
+  // model = new sendSupport('');
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -22,15 +20,17 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  firstFormGroup = this.fb.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this.fb.group({
-    secondCtrl: ['', Validators.required],
-  });
+  ContactFormGroup = new FormGroup({
+    problemText: new FormControl('', Validators.required),
+  })
+
+  // firstFormGroup = this.fb.group({
+  //   secondCtrl: ['', Validators.required],
+  // });
 
   sendSupport() {
-    this.authService.sendSupport(this.model.name, this.model.problem);
-    console.log(this.model);
+    const sendProblem = this.ContactFormGroup.value.problemText;
+
+    this.authService.sendSupport(sendProblem);
   }
 }
