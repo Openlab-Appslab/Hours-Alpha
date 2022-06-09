@@ -1,7 +1,7 @@
 export var productSales = [
     {
         "name": "Product 1",
-        "value": 894
+        "value": 250
     }, {
         "name": "Product 2",
         "value": 654
@@ -14,6 +14,12 @@ export var productSales = [
     }, {
         "name": "Product 5",
         "value": 654
+    } , {
+        "name": "Product 6",
+        "value": 1800
+    }, {
+        "name": "Product 7",
+        "value": 430
     }
 ];
 

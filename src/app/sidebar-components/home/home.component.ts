@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
 
   view: [number, number] = [700, 370];
   colorScheme = {
-    domain: ['#1d8f7a', '#1d6f8f', '#1d8f43', '#5f8f1d', '#1d5e8f']
+    domain: ['#1d8f7a', '#1d6f8f', '#1d8f43', '#5f8f1d', '#1d5e8f', '#4b42f5', '#8742f5']
   };
   schemeType: string = 'ordinal'; //ordinal or linear
   gradient: boolean = true;

@@ -14,7 +14,10 @@ export class ContactComponent implements OnInit {
   problem: string = '';
 
   model = new sendSupport('', '');
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    ) { }
 
   ngOnInit(): void {
   }
@@ -26,10 +29,8 @@ export class ContactComponent implements OnInit {
     secondCtrl: ['', Validators.required],
   });
 
-  // sendSupport() {
-  //   this.AuthService.sendSupport(this.model.name, this.model.problem);
-  //   console.log(this.model);
-  // }
-
-
+  sendSupport() {
+    this.authService.sendSupport(this.model.name, this.model.problem);
+    console.log(this.model);
+  }
 }
