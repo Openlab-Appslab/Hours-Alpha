@@ -15,29 +15,34 @@
         <div class="edit_container">
             <h2>Your Profile</h2>
 
-            <label class="field field_v3" style="margin-left: 2%; margin-bottom: 2%;">
+            <!-- <label class="field field_v3" style="margin-left: 2%; margin-bottom: 2%;">
                     <input class="field__input" placeholder="Your Name"/>
                     <span class="field__label-wrap">
                     <span class="field__label">Name</span>
                     </span>
-            </label>
+            </label> -->
 
- 
-            <label class="field field_v3" style="margin-left: 2%;">
-                    <input name="hours_input" (keyup.enter)="AdValue()" class="field__input" placeholder="Your Hours" [(ngModel)]="input_value">
+            <div class="main_profile_div">
+                <label class="field field_v3" style="margin-left: 2%;">
+                    <input name="hours_input" class="field__input" placeholder="Your Hours" [(ngModel)]="input_value">
                     <span class="field__label-wrap">
                     <span class="field__label">Hours</span>                        
-                </span> 
-            </label>
-            <button (click)="AdValue()" class="plus"></button>
+                    </span> 
+                </label>
 <br>
-            <label class="field field_v3" style="margin-left: 2%;">
-                <input class="field__input" placeholder="Your Workplace" #hours [(ngModel)]="workPlace">
-                <span class="field__label-wrap">
-                <span class="field__label">Workplace</span>
-                </span> 
-            </label>
+                <label class="field field_v3" style="margin-left: 2%;">
+                    <input class="field__input" placeholder="Your Workplace" #hours [(ngModel)]="workPlace">
+                    <span class="field__label-wrap">
+                    <span class="field__label">Workplace</span>
+                    </span> 
+                </label>
+            </div>
 <br>
+            <div class="date_div">
+                <input
+                    type="date"
+                    [(ngModel)]="dateSelected">
+            </div>
            
 <button  class="userInfoChange" (click)="sendEmployeeInfo()" > Change </button>
         </div>

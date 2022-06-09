@@ -33,16 +33,26 @@ export class HomeComponent implements OnInit {
   input_value: number = 0;
   actual_value: number = 0;
 
-  AdValue(){
-    this.actual_value = this.actual_value + +this.input_value;
-    // console.log("adValue works")
+  dateSelected: any;
+
+  testDateSelected(){
+    console.log(this.dateSelected);
   }
 
+  // AdValue(){
+  //   this.actual_value = this.actual_value + +this.input_value;
+  //   // console.log("adValue works")
+  // }
+
   sendEmployeeInfo(): void { 
+    this.actual_value = this.actual_value + +this.input_value;
+    // console.log(this.dateSelected);
+
     const workPlace = this.workPlace;
     const numberOfHours = this.actual_value;
+    const todaysDate = this.dateSelected;
 
-      this.hoursService.sendEmployeeInfo(workPlace, numberOfHours)
+      this.hoursService.sendEmployeeInfo(workPlace, numberOfHours, todaysDate)
   }
 
   workPlaceWrite(){

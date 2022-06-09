@@ -17,13 +17,14 @@ export class HoursService {
     private cookies: CookieService,
   ) { }
 
-  sendEmployeeInfo(workPlace: string, numberOfHours: number){
+  sendEmployeeInfo(workPlace: string, numberOfHours: number, todaysDate: string){
 
     let authString = `${this.cookies.get("email")}:${this.cookies.get("password")}`
 
     this.cookies.set('workPlace', workPlace);
+    this.cookies.set('dateSelected', todaysDate);
 
-    fetch('http://localhost:8080/employee/addWorkInfo' +workPlace + "/" + numberOfHours, {
+    fetch('http://localhost:8080/employee/addWorkInfo' +workPlace + "/" + numberOfHours + "/" + todaysDate, {
       method: 'POST',
       headers: new Headers({
       'Authorization': 'Basic '+btoa(authString), 

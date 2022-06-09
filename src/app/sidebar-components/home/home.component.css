@@ -11,12 +11,32 @@ body{
     background-color: #007254;
     border-radius: 10px;
     width: 260px;
-    border-color: #fff;
+    border-style: hidden;
+}
+
+input[type="date"]{
+    background-color: #02a87c;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: hidden;
+}
+
+.date_div{
+    margin-right: 315px;
+    float: right;
+}
+
+.main_profile_div{
+    float: left;
+    margin-left: 10px;
 }
 
 .download_btn:hover{
-    color: #fff;
+    color: #ffffff;
     background-color: #007254;
+    border-style: hidden;
 }
 
 .workPlaceChange:hover {
@@ -41,8 +61,8 @@ body{
     font-size: 20px;
     border-radius: 10px;
     margin-bottom: 25px;
-    color: #c7c7c7;
-    border-color: #fff;
+    color: #ffffff;
+    border-style: hidden;
 }
 
 .userInfoChange:hover{
