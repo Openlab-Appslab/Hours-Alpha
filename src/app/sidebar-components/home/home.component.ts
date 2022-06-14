@@ -25,8 +25,6 @@ export class HomeComponent implements OnInit {
   productSalesMulti: any;
 
   workPlace: string = '';
-  id: number;
-  test: number;
 
   totalWorkedHours: number = 0;
 
@@ -52,7 +50,7 @@ export class HomeComponent implements OnInit {
     const numberOfHours = this.actual_value;
     const todaysDate = this.dateSelected;
 
-      this.hoursService.sendEmployeeInfo(workPlace, numberOfHours, todaysDate)
+      this.hoursService.sendEmployeeInfo(workPlace, numberOfHours, todaysDate);
   }
 
   workPlaceWrite(){
@@ -61,13 +59,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = Number(this.route.snapshot.paramMap.get('numberOfHours'));
+    // this.id = Number(this.route.snapshot.paramMap.get('numberOfHours'));
 
-    this.hoursService.getHours(this.id).subscribe(response=> {
-      console.log("ngOnInit hours response");
-      this.totalWorkedHours = response;
-      this.cookies.set("displayWorkedHours",this.totalWorkedHours.toString());
-    })
+    // this.hoursService.getHours(this.id).subscribe(response=> {
+    //   console.log("ngOnInit hours response");
+    //   this.totalWorkedHours = response;
+    //   this.cookies.set("displayWorkedHours",this.totalWorkedHours.toString());
+    // })
 
     // this.hoursService.getHours(this.id).subscribe(test => this.test = test)
   }

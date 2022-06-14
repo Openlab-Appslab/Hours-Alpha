@@ -19,18 +19,18 @@ export class HoursService {
 
   sendEmployeeInfo(workPlace: string, numberOfHours: number, todaysDate: string){
 
-    let authString = `${this.cookies.get("email")}:${this.cookies.get("password")}`
+    let authString = `${this.cookies.get("email")}:${this.cookies.get("password")}`;
 
     this.cookies.set('workPlace', workPlace);
     this.cookies.set('dateSelected', todaysDate);
 
-    fetch('http://localhost:8080/employee/addWorkInfo' +workPlace + "/" + numberOfHours + "/" + todaysDate, {
+    fetch('http://localhost:8080/employee/addWorkInfo/'/* + workPlace + "/" + numberOfHours + "/" + todaysDate*/, {
       method: 'POST',
       headers: new Headers({
       'Authorization': 'Basic '+btoa(authString), 
       'Content-Type': "application/json; charset=utf8",
     }),
-    // body: JSON.stringify(name, problem),
+    body: JSON.stringify({numberOfHours: numberOfHours, workPlace: workPlace, todaysDate: todaysDate}),
     })
     .then(() => {
       console.log('Success!');
@@ -41,8 +41,8 @@ export class HoursService {
     });
   }  
 
-  getHours(numberOfHours: number){
-    return this.http.get<any>('http://localhost:8080/employee/showAllWorkInfo' + numberOfHours)
+  // getHours(numberOfHours: number){
+  //   return this.http.get<any>('http://localhost:8080/employee/showAllWorkInfo' + numberOfHours)
 
   //   let authString = `${this.cookies.get("email")}:${this.cookies.get("password")}`
 
@@ -62,5 +62,5 @@ export class HoursService {
   //     console.error('Error:' , error);
   //   });
   // }
-  }
+  //}
 }
